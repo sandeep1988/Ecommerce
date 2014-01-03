@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 	attr_accessor :password_confirmation
 	attr_reader :password
 	validate:password_must_be_present
+	
   def User.authenticate(name, password)
 	if user = find_by_name(name)
 		if user.hashed_password == encrypt_password(password, user.salt)

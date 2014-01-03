@@ -74,7 +74,6 @@ class UsersController < ApplicationController
     end
   end
 
-
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
