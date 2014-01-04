@@ -74,11 +74,13 @@ skip_before_filter :authorize, :only => [:create, :update, :destroy]
   # DELETE /carts/1.json
   def destroy
     @cart = current_cart
-      @cart.destroy
-      session[:cart_id] = nil
-        respond_to do |format|
-          format.html { redirect_to(store_url) }
-            format.xml { head :ok }
-            end
-          end
+    @cart.destroy
+    session[:cart_id] = nil
+
+    respond_to do |format|
+      format.html { redirect_to store_index_path,
+     :notice => 'Your cart is currently empty' }
+      format.xml {head :ok}
+    end
+  end
 end
