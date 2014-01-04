@@ -14,9 +14,11 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
 		cart = Cart.find(session[:cart_id])
 		assert_equal 1, cart.line_items.size
 		assert_equal ruby_book, cart.line_items[0].product
+
 		get "/orders/new"
 		assert_response :success
 		assert_template "new"
+
 		post_via_redirect "/orders" ,
 		:order => { :name
 		=> "Dave Thomas" ,
@@ -28,14 +30,16 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
 		assert_template "index"
 		cart = Cart.find(session[:cart_id])
 		assert_equal 0, cart.line_items.size
+
 		orders = Order.find(:all)
 		assert_equal 1, orders.size
 		order = orders[0]
+
+		assert_equal "Dave Thomas" , order.name
 		assert_equal
 		assert_equal
 		assert_equal
-		assert_equal
-		"Dave Thomas" ,
+		
 		order.name
 		"123 The Street" ,
 		order.address

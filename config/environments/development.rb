@@ -14,7 +14,7 @@ Demo::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.delivery_method = :sendmail
+  #config.action_mailer.delivery_method = :sendmail
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
@@ -32,17 +32,17 @@ Demo::Application.configure do
   config.assets.compress = false
 
   # Expands the lines which load the assets
-  # config.assets.debug = true
+   config.assets.debug = true
  # config.action_mailer.delivery_method = :test
 
-  config.action_mailer.delivery_method = :smtp
-    config.action_mailer.smtp_settings = {
-    :address => "smtp.gmail.com" ,
-    :port => 587,
-    :domain => "domain.of.sender.net" ,:authentication => "plain" ,
-    :user_name => "sandeep" ,
-    :password => "12345678" ,
-    :enable_starttls_auto => true
- }
+ #  config.action_mailer.delivery_method = :smtp
+ #    config.action_mailer.smtp_settings = {
+ #    :address => "smtp.gmail.com" ,
+ #    :port => 587,
+ #    :domain => "domain.of.sender.net" ,:authentication => "plain" ,
+ #    :user_name => "sandeep" ,
+ #    :password => "12345678" ,
+ #    :enable_starttls_auto => true
+ # }
 
 end
