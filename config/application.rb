@@ -55,7 +55,7 @@ module Demo
     config.assets.initialize_on_precompile = false
     # Enable the asset pipeline
     config.assets.enabled = true
-config.action_mailer.default_url_options = { host: 'localhost:3000' }
+config.action_mailer.default_url_options = { host: 'http://ancient-lake-5469.herokuapp.com' }
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
