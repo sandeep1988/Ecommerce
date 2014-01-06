@@ -57,7 +57,6 @@ module Demo
     config.assets.enabled = true
     config.action_mailer.default_url_options = { host: 'http://localhost:3000' }
     #config.action_mailer.default_url_options = { host: 'http://localhost:3000' }
-
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
