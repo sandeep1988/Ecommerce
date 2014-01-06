@@ -12,7 +12,8 @@ Demo::Application.configure do
     :authentication => "plain",
     :user_name => "schourey1988@gmail.com",
     :password => "sandeep1988",
-    :enable_starttls_auto => true	
+    :enable_starttls_auto => false	
  }
+ config.action_mailer.raise_delivery_errors = true
 end
 
