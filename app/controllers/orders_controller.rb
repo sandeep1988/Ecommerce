@@ -53,6 +53,7 @@ end
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         Notifier.order_received(@order).deliver
+         AdminMailer.user_added().deliver
         format.html { redirect_to(store_index_path, :notice => 'Thank you for your order.' ) }
         format.json { render json: @order, status: :created, location: @order }
       else
