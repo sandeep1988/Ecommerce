@@ -74,7 +74,7 @@ Demo::Application.configure do
     :domain => "gmail.com",
     :authentication => "plain",
     :user_name => "schourey1988@gmail.com",
-    :password => ENV['sandeep1988'],
+    :password => 'sandeep1988',
     :authentication => "plain",
     :enable_starttls_auto => true 
  }
