@@ -72,7 +72,7 @@ Demo::Application.configure do
     :port => 587,
     :domain => "gmail.com",
     :user_name => "schourey1988@gmail.com",
-    :password => 'sandeep1988',
+    :password => 'sandeep9754431024',
     :authentication => "plain",
     :enable_starttls_auto => true 
  }
