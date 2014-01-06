@@ -6,27 +6,25 @@ Demo::Application.routes.draw do
     post 'login' => :create
     delete 'logout' => :destroy
   end
-
  
-  resources :users
-    match '/signup',  to: 'users#new', via: 'get'
-
-  resources :orders
-
+  resources :orders do 
+ get 'destroy', to: 'orders#destroy',as: :destroy
+  end
 
   resources :line_items
-
-
   resources :carts
-
-
   get "store/index"
 
  resources :products do
   get :who_bought, :on => :member
+  get 'destroy', to: 'products#destroy',as: :destroy
  end
 
-
+resources :users do
+  match '/signup',  to: 'users#new', via: 'get'
+  get 'destroy', to: 'users#destroy', as: :destroy
+ end
+   # match '/users/:id' => 'users#destroy'    
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
