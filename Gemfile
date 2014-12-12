@@ -33,4 +33,4 @@ gem 'will_paginate', '>= 3.0.pre'
 # gem 'capistrano'
 
 # To use debugger
- gem 'debugger'
+#gem 'debugger'
