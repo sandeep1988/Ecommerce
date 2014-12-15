@@ -1,5 +1,5 @@
 class Cart < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :price
   has_many :line_items, :dependent => :destroy
 
     def add_product(product_id)
@@ -18,8 +18,7 @@ class Cart < ActiveRecord::Base
 
 	def total_items
 		line_items.sum(:quantity)
-    end
-
+  end
 
 def paypal_url(return_url)
     values = {
