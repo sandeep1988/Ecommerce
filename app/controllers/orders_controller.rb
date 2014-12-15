@@ -11,7 +11,6 @@ skip_before_filter :authorize, :only => [:new, :create]
         end
   end
 
-
   # GET /orders/1
   # GET /orders/1.json
   def show
@@ -35,8 +34,8 @@ skip_before_filter :authorize, :only => [:new, :create]
               respond_to do |format|
                 format.html # new.html.erb
                   format.xml { render :xml => @order }
-end
   end
+    end
 
   # GET /orders/1/edit
   def edit
@@ -48,18 +47,17 @@ end
   def create
     @order = Order.new(params[:order])
     @order.add_line_items_from_cart(current_cart)
-    respond_to do |format|
+    @order.total_amount = current_cart.total_price.to_f
       if @order.save
-        Cart.destroy(session[:cart_id])
-        session[:cart_id] = nil
-        Notifier.order_received(@order).deliver
-         AdminMailer.user_added().deliver
-        format.html { redirect_to(store_index_path, :notice => 'Thank you for your order.' ) }
-        format.json { render json: @order, status: :created, location: @order }
+        #@order.total_amount = current_cart.total_price.to_f
+        #@order.update_attributes(:total_amount => current_cart.total_price.to_f)
+       redirect_to @order.paypal_url(products_url)
+       #Cart.destroy(session[:cart_id])
+       #session[:cart_id] = nil
       else
-        format.html { render action: "new" }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
+      render :new
+        #Notifier.order_received(@order).deliver
+         #AdminMailer.user_added().deliver
     end
   end
   # PUT /orders/1
