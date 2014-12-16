@@ -49,11 +49,13 @@ skip_before_filter :authorize, :only => [:new, :create]
     @order.add_line_items_from_cart(current_cart)
     @order.total_amount = current_cart.total_price.to_f
       if @order.save
+        Notifier.order_received(@order).deliver!
+        #AdminMailer.user_added().deliver!
         #@order.total_amount = current_cart.total_price.to_f
         #@order.update_attributes(:total_amount => current_cart.total_price.to_f)
        redirect_to @order.paypal_url(products_url)
-       #Cart.destroy(session[:cart_id])
-       #session[:cart_id] = nil
+       Cart.destroy(session[:cart_id])
+       session[:cart_id] = nil
       else
       render :new
         #Notifier.order_received(@order).deliver
