@@ -78,7 +78,7 @@ Demo::Application.configure do
  # }
 
  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => 'http://mysterious-wildwood-8925.herokuapp.com/' }
+  config.action_mailer.default_url_options = { :host => 'http://ancient-lake-5469.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
   :address => 'smtp.gmail.com',
@@ -89,7 +89,4 @@ Demo::Application.configure do
   :domain => 'heroku.com',
   :enable_starttls_auto => true
   }
-end
-
-
 end
