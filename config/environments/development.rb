@@ -33,6 +33,7 @@ Demo::Application.configure do
 
   # Expands the lines which load the assets
    config.assets.debug = true
+   config.force_ssl = true
 
  # config.action_mailer.delivery_method = :smtp
  # config.action_mailer.smtp_settings = {
@@ -45,4 +46,26 @@ Demo::Application.configure do
  #    :enable_starttls_auto => false  
  # }
  # config.action_mailer.raise_delivery_errors = true
+
+#  config.after_initialize do
+#   ActiveMerchant::Billing::Base.mode = :test
+#   paypal_options = {
+#     :login => "schourey1988-facilitator_api1.gmail.com",
+#     :password => "8UH32FGA86XRKGEF",
+#     :signature => "AFcWxV21C7fd0v3bYYYRCpSSRl31A-qtjVAaebj353SFz1hp9D.wNR4q"
+#   }
+#   ::STANDARD_GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(paypal_options)
+#   ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
+# end
+
+config.action_mailer.raise_delivery_errors = true
+ config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :user_name            => "schourey1988test@gmail.com",
+    :password             => 'sandeep9754431024test',
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
 end
