@@ -84,8 +84,8 @@ Demo::Application.configure do
   :address => 'smtp.gmail.com',
   :port => '587',
   :authentication => :plain,
-  :user_name => 'schourey1988test@gmail.com',
-  :password => 'sandeep9754431024test',
+  :user_name => 'schourey1988@gmail.com',
+  :password => 'sandee9754431024',
   :domain => 'heroku.com',
   :enable_starttls_auto => true
   }

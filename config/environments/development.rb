@@ -62,8 +62,8 @@ config.action_mailer.raise_delivery_errors = true
   ActionMailer::Base.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :user_name            => "schourey1988test@gmail.com",
-    :password             => 'sandeep9754431024test',
+    :user_name            => "schourey1988@gmail.com",
+    :password             => 'sandee9754431024',
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
