@@ -1,3 +1,11 @@
+<div class="row">
+
+  <!-- Line Chart - Single Series -->
+  <div class="col-xs-6">
+    <h3>Visits By Day</h3>
+    <%= pie_chart @orders.group_by_day(:created_at, format: "%B %d, %Y").count, discrete: true %>
+  </div>
+</div>
 <h1>Listing orders</h1>
 <table>
 <tr>
@@ -12,11 +20,11 @@
 </tr>
 <% @orders.each do |order| %>
 <tr>
-<td>&nbsp&nbsp&nbsp<%= order.name %></td>
-<td>&nbsp&nbsp&nbsp<%= order.address %></td>
-<td>&nbsp&nbsp&nbsp<%= order.email %></td>
-<td>&nbsp&nbsp&nbsp<%= order.pay_type %></td>
-<td>&nbsp&nbsp&nbsp<%= order.total_amount.to_f %></td>
+<td><%= order.name %></td>
+<td><%= order.address %></td>
+<td><%= order.email %></td>
+<td><%= order.pay_type %></td>
+<td><%= order.total_amount.to_f %></td>
 <td><%= link_to 'Show' , order %></td>
 <td><%= link_to 'Edit' , edit_order_path(order) %></td>
 <td><%= link_to 'Destroy' , order_destroy_path(order), :confirm => 'Are you sure?' ,:method => :delete %></td>
