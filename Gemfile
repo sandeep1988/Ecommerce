@@ -20,9 +20,9 @@ end
 gem 'rails_12factor', group: :production
 gem 'jquery-rails'
 gem 'will_paginate', '>= 3.0.pre'
-gem 'chartkick'
-gem 'groupdate'
-gem 'active_median'
+gem 'chartkick', '~> 1.2.4'
+gem 'groupdate', '~> 2.1.1'
+gem 'active_median', '~> 0.1.0'
 gem "googlecharts"
 
 # To use ActiveModel has_secure_password
