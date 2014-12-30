@@ -17,11 +17,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'rails_12factor', group: :production
 gem 'jquery-rails'
 gem 'will_paginate', '>= 3.0.pre'
 gem 'chartkick'
 gem 'groupdate'
 gem 'active_median'
+gem "googlecharts"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
