@@ -19,9 +19,9 @@ end
 
 gem 'jquery-rails'
 gem 'will_paginate', '>= 3.0.pre'
-gem 'chartkick', '~> 1.2.4'
-gem 'groupdate', '~> 2.1.1'
-gem 'active_median', '~> 0.1.0'
+#gem 'chartkick', '~> 1.2.4'
+#gem 'groupdate', '~> 2.1.1'
+#gem 'active_median', '~> 0.1.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
