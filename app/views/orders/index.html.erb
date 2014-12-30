@@ -22,7 +22,6 @@
 <td><%= order.address %></td>
 <td><%= order.email %></td>
 <td><%= order.pay_type %></td>
-<td><%= order.total_amount.to_f %></td>
 <td><%= link_to 'Show' , order %></td>
 <td><%= link_to 'Edit' , edit_order_path(order) %></td>
 <td><%= link_to 'Destroy' , order_destroy_path(order), :confirm => 'Are you sure?' ,:method => :delete %></td>
