@@ -20,8 +20,22 @@ you should add Ruby to your toolbox.
 :image_url => '/images/ruby.jpg',
 :price => 49.50)
 
-
 User.create(
     :name => "admin",
     :password => "12345678"
 )
+Order.delete_all
+Order.create  name: "indore", address: "indore", email: "indore@gmail.com", pay_type: "Credit card",  total_amount: 49.5
+Order.create  name: "ram", address: "indore", email: "ram@gmail.com", pay_type: "Purchase order",  total_amount: 49.5
+Order.create  name: "goa", address: "goa", email: "sandeepchourey@gmail.com", pay_type: "Credit card",  total_amount: 49.5
+Order.create  name: "sandeepchourey", address: "indore", email: "sandeepchourey@gmail.com", pay_type: "Check",  total_amount: 49.5
+Order.create  name: "sandy", address: "delhi", email: "sandy@gmail.com", pay_type: "Credit card",  total_amount: 49.5
+Order.create  name: "sandeepchourey", address: "goa", email: "raju@gmail.com", pay_type: "Credit card",  total_amount: 49.5
+Order.create  name: "raju", address: "indore", email: "raju@gmail.com", pay_type: "Purchase order",  total_amount: 49.5
+Order.create  name: "raju", address: "goa", email: "sandeepchourey@gmail.com", pay_type: "Credit card",  total_amount: 49.5
+Order.create  name: "sandeepchourey", address: "delhi", email: "raju@gmail.com", pay_type: "Credit card",  total_amount: 49.5
+Order.create  name: "raju", address: "delhi", email: "sandeepchourey@gmail.com", pay_type: "Check",  total_amount: 49.5
+Order.create  name: "goa", address: "indore", email: "sandeepchourey@gmail.com", pay_type: "Credit card",  total_amount: 49.5
+Order.create  name: "sandeepchourey", address: "indore", email: "sandeepchourey@gmail.com", pay_type: "Credit card",  total_amount: 49.5
+Order.create  name: "shyam", address: "delhi", email: "shyam@gmail.com", pay_type: "Credit card",  total_amount: 49.5
+Order.create  name: "shyam", address: "goa", email: "ram@gmail.com", pay_type: "Check", total_amount: 49.5
