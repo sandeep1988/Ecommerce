@@ -1,3 +1,9 @@
+<div class="row">
+  <div class="col-xs-6">
+    <h3>Orders By Day</h3>
+    <%= pie_chart @orders.group(:name).count, discrete: true %>
+</div>
+  </div>
 <h1>Listing orders</h1>
 <table>
 <tr>
