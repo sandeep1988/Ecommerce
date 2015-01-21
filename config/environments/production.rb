@@ -15,10 +15,6 @@ Demo::Application.configure do
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = true
-<<<<<<< HEAD
-=======
-  config.assets.precompile += %w( chartkick.js )
->>>>>>> aa076101eaa71d6583e6991b373b3a099a93af47
 
   # Generate digests for assets URLs
   config.assets.digest = true
