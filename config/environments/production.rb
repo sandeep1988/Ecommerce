@@ -8,13 +8,17 @@ Demo::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = true
+<<<<<<< HEAD
+=======
+  config.assets.precompile += %w( chartkick.js )
+>>>>>>> aa076101eaa71d6583e6991b373b3a099a93af47
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -59,7 +63,6 @@ Demo::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-  config.assets.compile = true
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5

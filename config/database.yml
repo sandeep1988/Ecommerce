@@ -6,17 +6,17 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: demo_db
+  database: demo_db_24dec
   pool: 5
   host: localhost
   username: postgres
   password: postgres
 
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: demo_db_test
-  pool: 5
-  host: localhost
-  username: postgres
-  password: postgres
+# test:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: demo_db_test
+#   pool: 5
+#   host: localhost
+#   username: postgres
+#   password: postgres
