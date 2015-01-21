@@ -14,7 +14,57 @@ Ruby is the fastest growing and most exciting dynamic language
 out there. If you need to get working programs delivered fast,
 you should add Ruby to your toolbox.
 </p>},
-:image_url => '/images/rails.jpg',
+:image_url => '/assets/images/rails.png',
+:price => 49.50)
+
+Product.create(:title => 'Ruby Programming Essentials',
+:description =>
+%{<p>
+Ruby is the fastest growing and most exciting dynamic language
+out there. If you need to get working programs delivered fast,
+you should add Ruby to your toolbox.
+</p>},
+:image_url => '/assets/images/beginning-ruby-from-novice-to-professional.jpg',
+:price => 49.50)
+
+Product.create(:title => 'Programming Ruby 1.9: The Matic Programmers',
+:description =>
+%{<p>
+Ruby is the fastest growing and most exciting dynamic language
+out there. If you need to get working programs delivered fast,
+you should add Ruby to your toolbox.
+</p>},
+:image_url => '/assets/images/learn-to-program-second-edition-the-facets-of-ruby-series-.jpg',
+:price => 49.50)
+
+Product.create(:title => 'Metaprogramming Ruby: Program Like the Ruby Pros',
+:description =>
+%{<p>
+Ruby is the fastest growing and most exciting dynamic language
+out there. If you need to get working programs delivered fast,
+you should add Ruby to your toolbox.
+</p>},
+:image_url => '/assets/images/ruby-programming-essentials.jpg',
+:price => 49.50)
+
+Product.create(:title => 'Learn to Program, Second Edition (The Facets of Ruby Series)',
+:description =>
+%{<p>
+Ruby is the fastest growing and most exciting dynamic language
+out there. If you need to get working programs delivered fast,
+you should add Ruby to your toolbox.
+</p>},
+:image_url => '/assets/images/rails.png',
+:price => 49.50)
+
+Product.create(:title => 'The Ruby Programming Language',
+:description =>
+%{<p>
+Ruby is the fastest growing and most exciting dynamic language
+out there. If you need to get working programs delivered fast,
+you should add Ruby to your toolbox.
+</p>},
+:image_url => '/assets/images/the-ruby-programming-language.jpg',
 :price => 49.50)
 
 User.create(

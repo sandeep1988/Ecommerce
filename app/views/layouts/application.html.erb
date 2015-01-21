@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Pragprog Books Online Store</title>
-<%= stylesheet_link_tag "scaffold" %>
+<%= stylesheet_link_tag "scaffolds" %>
 <%= javascript_include_tag 'application' %>
 <%= stylesheet_link_tag "depot" , :media => "all" %>
 <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
@@ -29,8 +29,7 @@
       <%= link_to 'Home' , store_index_path %><br />
      <%= link_to 'Orders' ,orders_path %><br>
      <%= link_to 'Products' , products_path %><br />
-     <%= link_to 'Users' ,users_path %><br /><br>
-    <%= link_to 'Google Analytic' %><br /><br>     
+     <%= link_to 'Users' ,users_path %><br /><br>   
     <%= button_to 'Logout' , logout_path, :method => :delete %><br />
  <% else %>
     <br />

@@ -41,24 +41,18 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
-  # puts "rrrrrrrrrrrrrr#{.inspect}"
   @cart = current_cart #maintain the cart session
-    puts "eeeeeeeeeeeee#{session[:card_id].inspect}"
   product = Product.find(params[:product_id]) #finding the products by product_id
-    puts "tttttttttttt#{product}"
   @line_item = @cart.add_product(product.id)
-
   #@line_item = @cart.line_items.build(:product => product) #building the line_items in current cart session with product_id
    respond_to do |format|
      if @line_item.save
        format.html { redirect_to(store_index_path) }
        format.js { @current_item = @line_item }
-       format.xml { render :xml => @line_item,
-       :status => :created, :location => @line_item }
+       format.xml { render :xml => @line_item, :status => :created, :location => @line_item }
      else
        format.html { render :action => "new" }
-       format.xml { render :xml => @line_item.errors,
-       :status => :unprocessable_entity }
+       format.xml { render :xml => @line_item.errors, :status => :unprocessable_entity }
      end
     end
   end
